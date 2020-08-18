@@ -1,0 +1,83 @@
+//Math.random()*50-25
+//document.getElementById('mountNode').innerHTML='XD LMAOOO hehe';
+//---------------------------------------------
+//function Neopets(){
+//  console.log(Math.random());
+//}
+function HELLO(props){
+  //return <div> Hellloo Rexact!</div>
+//  const handleClick = () => setCounter(counter+1);
+  //-----------------------------
+  //return <><button onClick={Neopets}>{counter}Juan</button></>;
+  //------------------------------
+//  return <button onClick={()=> //setCounter(counter*2)}>Juan says: //{counter}</button>;
+  //--------------------------------
+  const handleClick = () => props.onClickFunction(props.increment);
+  return(
+   // <button onClick={handleClick}>
+    <button onClick={handleClick}>
+    +urmom{props.increment}urmom
+    </button>
+    );
+}
+function HELL2O(props){
+  //return <div> Hellloo Rexact!</div>
+//  const handleClick = () => setCounter(counter+1);
+  //-----------------------------
+  //return <><button onClick={Neopets}>{counter}Juan</button></>;
+  //------------------------------
+//  return <button onClick={()=> //setCounter(counter*2)}>Juan says: //{counter}</button>;
+  //--------------------------------
+  const handleClick = () => props.onClickFunction(props.increment);
+  return(
+   // <button onClick={handleClick}>
+    <button onClick={handleClick}>
+    *urmom{props.increment}urmom
+    </button>
+    );
+}
+function Display(props){
+return(
+ <div>{props.message}</div>
+);
+}
+function Smort(){
+  const [counter, setCounter]=useState(0);
+  const incrementCounter=(tValue)=> setCounter(counter+incrementValue);
+  const incrementMultiplicationCounter=(incrementValue)=> setCounter(counter*incrementValue);
+  const html=
+      `juan has ${Math.random()} carrots`
+  return(
+    <div>
+      <HELLO onClickFunction={incrementCounter} increment = {5}/>
+      <HELLO onClickFunction={incrementCounter} increment = {10}/>
+      <HELLO onClickFunction={incrementCounter} increment = {100}/>
+      <HELLO onClickFunction={incrementCounter} increment = {420}/>
+      <HELLO onClickFunction={incrementCounter} increment = {45}/>
+      <HELLO onClickFunction={incrementMultiplicationCounter}increment= {45}/>
+      <Display message={counter}/>
+      {html}
+    </div>
+  );
+}
+// function Smor2t(){
+//   const [counter, setCounter]=useState(1);
+//   const incrementCounter=(incrementValue)=> setCounter(counter*incrementValue);
+//   return(
+//     <div>
+
+//       <HELL2O onClickFunction={incrementCounter} increment = {45}/>
+//       <Display message={counter}/>
+//     </div>
+//   );
+// }
+ReactDOM.render(
+//[<HELLO/>, <Display/>],
+  <Smort/>,
+  document.getElementById('mountNode'),
+  
+);
+
+
+
+
